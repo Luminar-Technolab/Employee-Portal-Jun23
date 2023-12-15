@@ -1,0 +1,50 @@
+
+            ANGULAR - FrontEnd Technology : Single Page Application
+        ---------------------------------------------------------------
+
+    Basic Commands
+    ---------------
+
+    1. to create project : ng new project-name
+    2. to run project : ng serve
+    3. to create new component : ng g c component-name
+    4. to create service :  ng g s service-folder-name/service-name
+
+    Basic Features
+    ---------------
+
+    1. Module : Used to hold multiple Components and helps import packages to design Page - Root Module : AppModule
+    2. Components : is a part of UI, consist of html,css and ts file and its selector to use it in another Page - Root Component : AppCompoenet
+    3. Decorator : to add meta data (data inside another data) , indicated using @
+    4. Selectors : to display Component design in another html file
+    5. Data Binding : Data shairing within a component (html,ts file)
+        - One way Binding : 
+            - Component (ts file) to view (html file)
+                - String Interpolation : use {{property-name}} in html page
+                - Property Binding : bind class property with html tag attributes - [attribute] = "property"
+            - View (html file) to component (ts file)
+                - Event Binding : use (event-name)="function-call"
+                - Event Binding using $event : use (event-name)="function-name($event)" - to get events in ts file
+                - Event Binding Template Reference variable : use #variable-name
+        - Two way Binding : Data shairing in both direaction at the same time
+            - Template Driven Forms : form will design in html first
+                - import FormsModule in module file
+                - use ngModel attribute : syntax - [(ngModel)]="class property" , if it is inside form tag, must set name attribute of that input tag
+            - Model Driven Forms : first create form model in ts file
+    6. To set up path for component
+        - define routes in routing.Module ts file
+            - syntax: {path:'',component:component-name}
+        - use router-outlet selector in root component
+    7. routerLink to redirect from one component to another in  tag
+    8. Dependency Injection : When a component and a class are dependent then dependent class instance can be assigned to other class in thier constructor
+        - syntax : constructor(access-specifier component-property:Dependent-Class name){}
+    9. Angular Services : used to define common logic that can accessed or shared by any component/classes
+    10. Directives : to provide Additional behavior to html elements, should starts with * symbol
+        - Component Directives : same as component selector which used to view its html in other page
+        - Structural Directives : used to change html structure by adding/removing html items 
+            - *ngIf=(condition) attribute: based on a condition to display html elements
+            - *ngFor=let variable-name of array-name  : render a list
+            - *ngSwitch
+        - Attribute Directives : used to provide style to html elements
+
+
